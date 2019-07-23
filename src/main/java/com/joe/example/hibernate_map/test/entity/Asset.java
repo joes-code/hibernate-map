@@ -17,7 +17,7 @@ public class Asset implements Serializable  {
     private BigDecimal price;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "asset_id", referencedColumnName = "asset_id", nullable = false, insertable = false, updatable = false, foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    @JoinColumn(name = "asset_detail_id", referencedColumnName = "asset_id",  insertable = false,foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
     private AssetDetail assetDetail;
 
     public AssetDetail getAssetDetail() {
